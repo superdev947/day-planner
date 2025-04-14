@@ -1,4 +1,3 @@
-// TaskInput.tsx
 import React, { useState } from "react";
 import { Box, TextField, Button, Chip, Stack, Typography } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
@@ -43,7 +42,7 @@ const TaskInput: React.FC<TaskInputProps> = ({ onSubmit }) => {
           label="Add a task"
           value={currentTask}
           onChange={(e) => setCurrentTask(e.target.value)}
-          onKeyPress={(e) =>
+          onKeyDown={(e) =>
             e.key === "Enter" && (e.preventDefault(), handleAddTask())
           }
         />
